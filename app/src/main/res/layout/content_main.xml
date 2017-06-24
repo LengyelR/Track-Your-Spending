@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/summary_card_view"
+        >
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:rowCount="4"
+            android:columnCount="4">
+
+            <!-- SUM -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="end"
+                android:id="@+id/value"
+                android:text="@string/sum"
+                android:textSize="30sp"
+                android:layout_columnSpan="2"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/prediction"
+                android:text="@string/sum"
+                android:textSize="15sp"
+                android:layout_columnSpan="2"
+                />
+
+
+            <!-- Food Sum -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/food_sum_text"
+                android:text="@string/food"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:id="@+id/food_sum"
+                android:text="@string/sum"
+                />
+
+
+
+            <!-- Food Average -->
+            <TextView
+                android:text="@string/average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/average_text"
+                />
+
+            <TextView
+                android:text="@string/average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/average"
+                />
+
+
+
+
+            <!-- Regular Sum -->
+            <TextView
+                android:text="@string/regular_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/regular_text"
+                />
+
+            <TextView
+                android:text="@string/sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/regular_sum"
+                />
+
+
+
+
+            <!-- Days -->
+            <TextView
+                android:layout_marginEnd="5dp"
+                android:text="@string/day_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/day_count_text"
+                />
+
+            <TextView
+                android:layout_marginEnd="5dp"
+                android:text="@string/day_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/day_count"
+                />
+
+
+
+
+
+
+            <!-- Other Sum -->
+            <TextView
+                android:layout_marginEnd="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/non_food_sum_text"
+                android:text="@string/other"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/non_food_sum"
+                android:text="@string/sum"
+                />
+
+
+
+
+        </GridLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/transaction_recycler_view"
+        android:layout_below="@id/summary_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>

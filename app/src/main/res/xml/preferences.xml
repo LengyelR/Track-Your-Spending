@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <EditTextPreference
+            android:inputType="numberDecimal"
+            android:title="Regular"
+            android:key="@string/outgoings_key"
+            android:defaultValue="520.00"
+            android:summary="This is your regular outgoings, like rent, utility bills, etc..">
+        </EditTextPreference>
+
+        <EditTextPreference
+            android:inputType="numberDecimal"
+            android:title="Balance"
+            android:key="@string/balance_key"
+            android:defaultValue="1000"
+            android:summary="Available on the account">
+        </EditTextPreference>
+
+</PreferenceScreen>
